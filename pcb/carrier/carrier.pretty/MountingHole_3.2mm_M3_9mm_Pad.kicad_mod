@@ -1,0 +1,108 @@
+(footprint "MountingHole_3.2mm_M3_9mm_Pad"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Mounting Hole 3.2mm, M3, DIN965")
+	(tags "mounting hole 3.2mm m3 din965")
+	(property "Reference" "H1"
+		(at 0 -3.8 0)
+		(layer "F.SilkS")
+		(uuid "d877892f-cd7f-46aa-b621-d47d44bff9af")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MountingHole_Pad"
+		(at 0 3.8 0)
+		(layer "F.Fab")
+		(uuid "de903012-36bc-40a0-a4d0-6b94d4b13ff9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "MountingHole:MountingHole_3.2mm_9mm_Pad"
+		(at 0.5 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "52464c0b-0d12-4484-8348-134d17f8015b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4d92cbf9-7db7-417e-9e3b-bae41bdb3592")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Mounting Hole with connection"
+		(at -0.5 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "93825fca-75bf-4b85-a52a-b82bbe239687")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr exclude_from_pos_files)
+	(fp_circle
+		(center 0 0)
+		(end 4.5 0)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill none)
+		(layer "Cmts.User")
+		(uuid "19854633-6c91-4c3c-9478-c660844c932a")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 4.55 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "244eb8b1-70c8-4136-adb0-8fb2b1bf6914")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "bc23bde5-485e-4c5f-8b8d-a4c8e3a5b2cd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 9 9)
+		(drill 3.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2e5bafae-6e20-4630-a6ff-d420c5a12757")
+	)
+)

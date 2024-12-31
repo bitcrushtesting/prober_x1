@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "encircle")(type "KiCad")(uri "${KIPRJMOD}/encircle.pretty")(options "")(descr ""))
+)
