@@ -2,6 +2,8 @@
 
 A hardware tool to help get access to PCB test points, on both sides of the PCB.
 
+![PROBER X1 assembly](docs/img/assembly.png)
+
 Four carrier PCBs are joined by 3D printed corners into a square frame. Mounting
 arms are screwed under the carriers and hold the probes and the DUT mounts. The
 DUT (device under test) is held at carrier height, so test points on both its
@@ -18,6 +20,10 @@ place on a steel base plate.
 4. Position the probes on the test points and connect the carriers with the
    2x04 DuPont cables.
 
+| Top | Bottom |
+|-----|--------|
+| ![Top view](docs/img/top.png) | ![Bottom view](docs/img/bottom.png) |
+
 ## BUILD
 
 ### Repository
@@ -28,6 +34,9 @@ place on a steel base plate.
 | `pcb/mounting_arm/`   | Mounting arm PCB, KiCad project                  |
 | `3d/corner.scad`      | Corner connector, OpenSCAD source                |
 | `3d/dut_mount.scad`   | DUT mount (PCB holder), OpenSCAD source          |
+| `3d/assembly.scad`    | Complete assembly with an example DUT            |
+| `3d/pcb/*.stl`        | PCB meshes exported from KiCad for the assembly  |
+| `3d/render.sh`        | Exports the PCB meshes and renders `docs/img`    |
 | `3d/*.stl`            | Print-ready exports of the OpenSCAD parts        |
 | `3d/*.step`           | 3D models of the PCBs                            |
 | `BOM.csv`             | Bill of materials                                |
@@ -61,6 +70,9 @@ openscad -o 3d/dut_mount.stl -D 'part="print"' 3d/dut_mount.scad
 ```
 
 Set `part = "assembly"` to preview a part together with the PCBs.
+`3d/assembly.scad` shows the complete prober. After changing a PCB or a part,
+run `3d/render.sh` (needs `kicad-cli` and `openscad`) to update the PCB meshes
+and the images in this README.
 
 ### Assembly
 
@@ -76,6 +88,8 @@ Set `part = "assembly"` to preview a part together with the PCBs.
 4. **Mounting arms**: screw the arms under the carriers.
 5. **DUT mounts**: place a DUT mount under the tip of each arm and fix it with
    an M3x8 thumb screw through the arm hole into the insert.
+
+![DUT mount under the arm tip](docs/img/dut_mount.png)
 
 ### Bill of materials
 
